@@ -25,7 +25,7 @@ export const botConfig = {
       {
         name: "Custom Status", // required by Discord API, not shown in the client
         state: "KLK",     // this is what people actually see
-        type: 5,               // Custom
+        type: 4,               // Custom
       },
     ],
   },
@@ -161,25 +161,25 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "dinero",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "dinero",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "€",
     },
 
     // Starting balance for new users.
-    startingBalance: 0,
+    startingBalance: 100,
 
     // Maximum bank amount before upgrades (if upgrades are used).
-    baseBankCapacity: 100000,
+    baseBankCapacity: 1000000000000000000000000,
 
     // Daily reward amount.
     dailyAmount: 100,
 
     // Work command random payout range.
-    workMin: 10,
-    workMax: 100,
+    workMin: 50,
+    workMax: 1000,
 
     // Beg command random payout range.
     begMin: 5,
@@ -187,10 +187,10 @@ export const botConfig = {
 
     // Command cooldowns (milliseconds).
     cooldowns: {
-      daily: 24 * 60 * 60 * 1000,
-      work: 60 * 60 * 1000,
-      crime: 2 * 60 * 60 * 1000,
-      rob: 4 * 60 * 60 * 1000,
+      daily: 5 * 10 * 20 * 60,
+      work: 5 * 20 * 60,
+      crime: 2 * 20 * 60 * 120,
+      rob: 4 * 20 * 60 * 120,
     },
 
     // Chance to succeed when robbing (0.4 = 40%).
@@ -226,25 +226,25 @@ export const botConfig = {
         color: "#95A5A6",
         label: "None",
       },
-      low: {
+      Poco: {
         emoji: "🟢",
         color: "#2ECC71",
-        label: "Low",
+        label: "Poco",
       },
-      medium: {
+      Medio: {
         emoji: "🟡",
         color: "#F1C40F",
-        label: "Medium",
+        label: "Medio",
       },
-      high: {
+      Alto: {
         emoji: "🔴",
         color: "#E74C3C",
-        label: "High",
+        label: "Alto",
       },
-      urgent: {
+      urgente: {
         emoji: "🚨",
         color: "#E91E63",
-        label: "Urgent",
+        label: "Urgente",
       },
     },
 
@@ -252,10 +252,10 @@ export const botConfig = {
     defaultPriority: "none",
 
     // Category ID where closed tickets are archived.
-    archiveCategory: null,
+    archiveCategory: 1558472784232063037,
 
     // Channel ID where ticket logs are sent.
-    logChannel: null,
+    logChannel: 1558472557399908392,
   },
 
   // =========================
@@ -302,10 +302,10 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "Haz click abajo para verificarte!",
 
     // Text on the verification button.
-    defaultButtonText: "Verify",
+    defaultButtonText: "Verificate",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -372,13 +372,13 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      " {user} to {server} ¿Preparado para ganar?",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+      "{user} Hasta Luego. Ahora tenemos {memberCount} miembros.",
     // Channel ID for welcome messages.
-    defaultWelcomeChannel: null,
+    defaultWelcomeChannel: 1545022170466484296,
     // Channel ID for goodbye messages.
     defaultGoodbyeChannel: null,
   },
